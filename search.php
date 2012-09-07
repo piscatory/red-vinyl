@@ -2,8 +2,8 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package _s
- * @since _s 1.0
+ * @package Red Vinyl
+ * @since Red Vinyl 1.0
  */
 
 get_header(); ?>
@@ -14,10 +14,10 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'red-vinyl' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<?php _s_content_nav( 'nav-above' ); ?>
+				<?php red-vinyl_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php _s_content_nav( 'nav-below' ); ?>
+				<?php red-vinyl_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
